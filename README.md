@@ -1,1 +1,1 @@
-# AI-Enhanced-Super-Resolution-for-Astronomical-Data
+# AI-Enhanced Super Resolution for Astronomical Data
