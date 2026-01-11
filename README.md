@@ -156,6 +156,7 @@ AI-ESRAD/
 ├── data/
 │   ├── hr_images/
 │   ├── lr_images/
+│   └── syntheticdataset.py
 │
 ├── models/
 │   ├── srgan/
