@@ -102,7 +102,7 @@ upscaled_image.save("sd_5.jpg")
 import requests
 
 API_URL = ""
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": ""}
 
 def query(image_path, prompt):
     with open(image_path, "rb") as f:
