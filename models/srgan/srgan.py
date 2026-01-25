@@ -2,15 +2,16 @@ pip install torch torchvision
 
 import os
 import torch
-from torch import nn, optim
-from torch.utils.data import DataLoader, Dataset
-from torchvision import transforms
+import numpy as np
 from PIL import Image
 from tqdm import tqdm
-from skimage.metrics import peak_signal_noise_ratio, structural_similarity
-import numpy as np
-from torchvision.utils import save_image
+from torch import nn, optim
+from torchvision import transforms
 import torchvision.models as models
+from torchvision.utils import save_image
+from torch.utils.data import DataLoader, Dataset
+from skimage.metrics import peak_signal_noise_ratio, structural_similarity
+
 
 class SRDataset(Dataset):
     def __init__(self, lr_dir, hr_dir, transform_lr=None, transform_hr=None):
@@ -127,7 +128,6 @@ class Discriminator(nn.Module):
 
     def forward(self, x):
         return self.net(x).view(x.size(0), -1)
-
 
 
 class VGGFeatureExtractor(nn.Module):
