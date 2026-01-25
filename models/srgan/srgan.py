@@ -10,6 +10,7 @@ from tqdm import tqdm
 from skimage.metrics import peak_signal_noise_ratio, structural_similarity
 import numpy as np
 from torchvision.utils import save_image
+import torchvision.models as models
 
 class SRDataset(Dataset):
     def __init__(self, lr_dir, hr_dir, transform_lr=None, transform_hr=None):
@@ -127,7 +128,7 @@ class Discriminator(nn.Module):
     def forward(self, x):
         return self.net(x).view(x.size(0), -1)
 
-import torchvision.models as models
+
 
 class VGGFeatureExtractor(nn.Module):
     def __init__(self):
