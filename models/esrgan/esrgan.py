@@ -1,14 +1,18 @@
 import os
 import torch
-from torch import nn, optim
-from torch.utils.data import DataLoader, Dataset
-from torchvision import transforms
-from torchvision.utils import save_image
+import numpy as np
 from PIL import Image
 from tqdm import tqdm
-from skimage.metrics import peak_signal_noise_ratio, structural_similarity
-import numpy as np
+from torch import nn, optim
+import matplotlib.pyplot as plt
+from torchvision import transforms
 import torchvision.models as models
+from torchvision.utils import save_image
+import torchvision.transforms as transforms
+from torch.utils.data import DataLoader, Dataset
+from skimage.metrics import structural_similarity as ssim
+from skimage.metrics import peak_signal_noise_ratio as psnr
+from skimage.metrics import peak_signal_noise_ratio, structural_similarity
 
 # === Dataset ===
 def is_image_file(filename):
@@ -232,14 +236,8 @@ psnr = peak_signal_noise_ratio(hr_np, sr_np, data_range=1.0)
 ssim = structural_similarity(hr_np, sr_np, data_range=1.0, channel_axis=-1)
 print(f"PSNR: {psnr:.2f} dB, SSIM: {ssim:.4f}")
 
-from skimage.metrics import peak_signal_noise_ratio as psnr
-from skimage.metrics import structural_similarity as ssim
-import torch
-import torchvision.transforms as transforms
-from PIL import Image
-import numpy as np
-import os
 
+# === Evaluation ===
 def evaluate_sr_results(sr_folder, hr_folder):
     sr_filenames = sorted(os.listdir(sr_folder))
     hr_filenames = sorted(os.listdir(hr_folder))
@@ -274,11 +272,6 @@ def evaluate_sr_results(sr_folder, hr_folder):
     print(f"Average SSIM: {avg_ssim:.4f}")
 evaluate_sr_results(sr_folder="./ESR_output_tuned", hr_folder="./HR/HR")
 
-import os
-from PIL import Image
-import matplotlib.pyplot as plt
-import torchvision.transforms as transforms
-import torch
 
 # Directories
 sr_dir = "./ESR_output_tuned"
