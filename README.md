@@ -153,10 +153,9 @@ A Flask-based GUI allows users to:
 ```
 AI-ESRAD/
 │
-├── data/
-│   ├── hr_images/
-│   ├── lr_images/
-│   
+├── dataset/
+│   ├── HR/
+│   └── LR/   
 │
 ├── synthetic dataset/
 │   └── syntheticdataset.py
@@ -170,8 +169,10 @@ AI-ESRAD/
 │
 ├── frontend/
 │   ├── index.html
-│   ├── styles.css
-│   └── 
+│   ├── info.html
+│   ├── css
+│       └── styles.css  
+│   └── images/
 │
 ├── evaluation/
 │   └── visualization.py
