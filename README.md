@@ -146,6 +146,10 @@ A Flask-based GUI allows users to:
 * Download enhanced results
 * View PSNR & SSIM scores
 
+![1](https://github.com/user-attachments/assets/6be3e79d-25d1-4eb3-a7aa-c4dbb8b42bc8)
+
+![2](https://github.com/user-attachments/assets/c39ac981-c1b6-4cb7-b5ab-b88f904aebf5)
+
 ---
 
 ## 📂 Repository Structure
