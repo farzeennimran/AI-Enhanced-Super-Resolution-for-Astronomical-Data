@@ -1,1 +1,67 @@
+# ===============================
+# Core Python & Utilities
+# ===============================
+numpy>=1.23
+scipy>=1.10
+pillow>=9.5
+opencv-python>=4.8
+tqdm>=4.66
+matplotlib>=3.7
+seaborn>=0.13
+
+# ===============================
+# Deep Learning Framework
+# ===============================
+torch>=2.0
+torchvision>=0.15
+torchaudio>=2.0
+
+# ===============================
+# GANs & Super-Resolution
+# ===============================
+lpips>=0.1.4
+einops>=0.7.0
+scikit-image>=0.21
+
+# ===============================
+# Transformer / Restormer
+# ===============================
+timm>=0.9.12
+
+# ===============================
+# Diffusion Models
+# ===============================
+diffusers>=0.24.0
+transformers>=4.36.0
+accelerate>=0.25.0
+safetensors>=0.4.0
+
+# ===============================
+# Astronomical Data Processing
+# ===============================
+astropy>=5.3
+astroquery>=0.4.6
+
+# ===============================
+# Evaluation Metrics
+# ===============================
+piq>=0.8.0
+
+# ===============================
+# Web Application (Flask)
+# ===============================
+flask>=2.3
+flask-cors>=4.0
+gunicorn>=21.2
+
+# ===============================
+# Dataset Handling & Config
+# ===============================
+pandas>=2.0
+pyyaml>=6.0
+
+# ===============================
+# Optional (GPU Monitoring & Debug)
+# ===============================
+tensorboard>=2.14
 
