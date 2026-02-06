@@ -4,7 +4,7 @@
 
 ## 📌 Overview
 
-Astronomical imaging is fundamentally constrained by low resolution, noise, and observational limitations, making it difficult to detect faint celestial objects such as distant galaxies, stellar clusters, and exoplanetary structures.
+Astronomical imaging is fundamentally constrained by low resolution, noise, and observational limitations, making it difficult to detect faint celestial objects such as distant galaxies, stellar clusters, and exoplanetary structures. 
 
 AI-ESRAD proposes an AI-driven super-resolution framework that reconstructs high-resolution (HR) astronomical images from low-resolution (LR) inputs while preserving scientific integrity.
 The project introduces a learned GAN-based downsampling pipeline to generate realistic synthetic datasets and applies state-of-the-art super-resolution models to enhance astronomical imagery.
