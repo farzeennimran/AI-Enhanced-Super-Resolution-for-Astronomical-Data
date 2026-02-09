@@ -266,6 +266,7 @@ The project contributes to AI-driven astronomy, computational astrophysics, and 
 
 ---
 
+
 ## 📜 License
 
 This project is released for **academic and research use only**.
