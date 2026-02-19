@@ -2,7 +2,7 @@
 
 ## AI-Enhanced Super-Resolution for Astronomical Data
 
-## 📌 Overview
+## 📌 Overview 
  
 Astronomical imaging is fundamentally constrained by low resolution, noise, and observational limitations, making it difficult to detect faint celestial objects such as distant galaxies, stellar clusters, and exoplanetary structures. 
 
