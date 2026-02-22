@@ -1,4 +1,4 @@
-# 🌌 AI-ESRAD
+# 🌌 AI-ESRAD 
 
 ## AI-Enhanced Super-Resolution for Astronomical Data
 
