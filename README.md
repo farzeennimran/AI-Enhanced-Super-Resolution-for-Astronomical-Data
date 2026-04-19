@@ -2,33 +2,36 @@
   
 ## AI-Enhanced Super-Resolution for Astronomical Data
 
-## 📌 Overview 
+## Overview 
  
 Astronomical imaging is fundamentally constrained by low resolution, noise, and observational limitations, making it difficult to detect faint celestial objects such as distant galaxies, stellar clusters, and exoplanetary structures. 
 
 AI-ESRAD proposes an AI-driven super-resolution framework that reconstructs high-resolution (HR) astronomical images from low-resolution (LR) inputs while preserving scientific integrity.
 The project introduces a learned GAN-based downsampling pipeline to generate realistic synthetic datasets and applies state-of-the-art super-resolution models to enhance astronomical imagery.
 
-## 🚀 Key Contributions 
+## Key Contributions 
 
-✔️ GAN-based learned downsampling for realistic LR image generation
-✔️ Synthetic HR–LR paired dataset for astronomy
-✔️ Implementation of multiple SR models:
+- GAN-based learned downsampling for realistic LR image generation
 
-* SRGAN
-* ESRGAN
-* Stable Diffusion Upscaler
-* Transformer-based SR
-* Restormer
-* ResNet-based SR
+- Synthetic HR–LR paired dataset for astronomy
 
-✔️ Quantitative evaluation using PSNR and SSIM
-✔️ Interactive web-based GUI for image enhancement
-✔️ Comparative analysis across architectures
+- Implementation of multiple SR models:
+  1. SRGAN
+  2. ESRGAN
+  3. Stable Diffusion Upscaler
+  4. Transformer-based SR
+  5. Restormer
+  6. ResNet-based SR
+
+- Quantitative evaluation using PSNR and SSIM
+
+- Interactive web-based GUI for image enhancement
+
+- Comparative analysis across architectures
 
 ---
 
-## 🧠 Why Learned Downsampling (GANs)?
+## Why Learned Downsampling (GANs)?
 
 Traditional methods like bicubic interpolation apply a fixed mathematical function and fail to model real telescope degradations.
 
@@ -41,7 +44,7 @@ Traditional methods like bicubic interpolation apply a fixed mathematical functi
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ### Two-Stage Pipeline
 
@@ -69,9 +72,9 @@ Super-Resolved HR Image
 
 ---
 
-## 🧪 Models Implemented
+## Models Implemented
 
-### 🔹 SRGAN
+### SRGAN
 
 * Residual blocks + PixelShuffle
 * BCE adversarial loss + perceptual loss (VGG)
@@ -83,7 +86,7 @@ SSIM: **0.7437**
 
 ---
 
-### 🔹 ESRGAN (Best Performer)
+### ESRGAN (Best Performer)
 
 * RRDB blocks (Residual-in-Residual Dense Blocks)
 * Relativistic discriminator
@@ -95,7 +98,7 @@ SSIM: **0.8556**
 
 ---
 
-### 🔹 Stable Diffusion (4× Upscaler)
+### Stable Diffusion (4× Upscaler)
 
 * Used for generative enhancement
 * Preserves astronomical structure
@@ -103,21 +106,21 @@ SSIM: **0.8556**
 
 ---
 
-### 🔹 Transformer-Based SR
+### Transformer-Based SR
 
 * Self-attention for long-range dependencies
 * Better structural consistency
 
 ---
 
-### 🔹 Restormer
+### Restormer
 
 * Multi-DConv Head Transposed Attention
 * Strong SSIM performance on galaxies
 
 ---
 
-### 🔹 ResNet-Based SR
+### ResNet-Based SR
 
 * Strong baseline
 * Faster training
@@ -125,7 +128,7 @@ SSIM: **0.8556**
 
 ---
 
-## 📊 Quantitative Results
+## Quantitative Results
 
 | Model            | PSNR (dB) | SSIM       |
 | ---------------- | --------- | ---------- |
@@ -137,7 +140,7 @@ SSIM: **0.8556**
 
 ---
 
-## 🖥️ Web Interface
+## Web Interface
 
 A Flask-based GUI allows users to:
 
@@ -152,7 +155,7 @@ A Flask-based GUI allows users to:
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 AI-ESRAD/
@@ -189,22 +192,22 @@ AI-ESRAD/
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
-### 1️⃣ Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/your-username/AI-ESRAD.git
 cd AI-ESRAD
 ```
 
-### 2️⃣ Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Run Web Application
+### Run Web Application
 
 ```bash
 python app.py
@@ -218,7 +221,20 @@ http://localhost:5000
 
 ---
 
-## 🧰 System Requirements
+## Dataset
+You can get the dataset collected to create synthetic dataset on kaggle
+
+```bash
+import kagglehub
+
+# Download latest version
+path = kagglehub.dataset_download("farzeenimran/space-images")
+
+print("Path to dataset files:", path)
+```
+---
+
+## System Requirements
 
 * **Python** ≥ 3.10
 * **GPU** (NVIDIA CUDA recommended)
@@ -227,7 +243,7 @@ http://localhost:5000
 
 ---
 
-## 📐 Evaluation Metrics
+## Evaluation Metrics
 
 * **PSNR (Peak Signal-to-Noise Ratio)**
   Measures reconstruction fidelity
@@ -237,7 +253,7 @@ http://localhost:5000
 
 ---
 
-## 🔬 Datasets Used
+## Datasets Used
 
 * James webb sapce telescope (JWST)
 * Hubble space telescope (HST)
@@ -249,15 +265,14 @@ All datasets are publicly available and used for academic research only.
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
-* Synthetic data may not fully capture all real telescope degradations
 * High computational cost for GAN & diffusion training
 * Further validation required on raw telescope observations
 
 ---
 
-## 🎓 Academic Context
+## Academic Context
 
 This repository accompanies the Final Year Project (FYP) titled:
 
@@ -268,7 +283,7 @@ The project contributes to AI-driven astronomy, computational astrophysics, and 
 ---
 
 
-## 📜 License
+## License
 
 This project is released for **academic and research use only**.
 Please cite appropriately if used in publications.
