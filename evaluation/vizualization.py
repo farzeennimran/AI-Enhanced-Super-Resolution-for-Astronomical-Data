@@ -167,10 +167,10 @@ for path in image_paths:
     img = cv2.imread(path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-    plt.figure(figsize=(10, 7))
-    plt.imshow(img)
-    plt.axis('off')
-    plt.show()
+    #plt.figure(figsize=(10, 7))
+    #plt.imshow(img)
+    #plt.axis('off')
+    #plt.show()
 
 """TransformerSR"""
 
@@ -186,10 +186,10 @@ for path in image_paths:
     img = cv2.imread(path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-    plt.figure(figsize=(10, 7))
-    plt.imshow(img)
-    plt.axis('off')
-    plt.show()
+    #plt.figure(figsize=(10, 7))
+    #plt.imshow(img)
+    #plt.axis('off')
+    #plt.show()
 
 import plotly.graph_objects as go
 
