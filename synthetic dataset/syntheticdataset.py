@@ -575,7 +575,7 @@ for batch_idx, real_batch in enumerate(dataloader):
     if batch_idx == 2:  # Only show first 3 batches
         break
 
-pip install torch torchvision
+#pip install torch torchvision
 
 import os
 from PIL import Image
