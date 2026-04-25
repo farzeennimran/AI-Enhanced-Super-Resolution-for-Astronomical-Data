@@ -1,4 +1,4 @@
-!pip install diffusers transformers accelerate safetensors
+#pip install diffusers transformers accelerate safetensors
 
 from diffusers import StableDiffusionUpscalePipeline
 
