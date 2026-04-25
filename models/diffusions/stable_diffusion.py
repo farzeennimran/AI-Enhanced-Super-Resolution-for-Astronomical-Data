@@ -16,8 +16,8 @@ prompt = "high-resolution astronomical image"
 upscaled_image = pipe(prompt=prompt, image=image).images[0]
 upscaled_image.save("upscaled_SR_image.jpg")
 
-!pip install diffusers transformers accelerate safetensors
-!pip install scikit-image
+#pip install diffusers transformers accelerate safetensors
+#pip install scikit-image
 
 from diffusers import StableDiffusionUpscalePipeline
 import torch
