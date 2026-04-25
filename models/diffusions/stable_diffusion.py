@@ -9,7 +9,7 @@ pipe = StableDiffusionUpscalePipeline.from_pretrained(
 ).to("cuda")
 
 # Load LR image
-image = Image.open("/content/LR_670.png").convert("RGB").resize((128, 128))
+#image = Image.open("/content/LR_670.png").convert("RGB").resize((128, 128))
 
 # Run upscaling
 prompt = "high-resolution astronomical image"
